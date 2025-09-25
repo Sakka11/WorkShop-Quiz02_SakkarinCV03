@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakkarin_CV03</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monomaniac+One&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monomaniac+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Monomaniac+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Bebas Neue';
+            background: #000C58;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 80px;
+            background: #060135;
+        }
+
+        .logo {
+            font-size: 30px;
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #ff0000, #0000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-family: 'inter';
+            font-size: 12px;
+            transition: opacity 0.3s;
+        }
+
+        .nav a:hover {
+            opacity: 0.7;
+            color: chartreuse;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 205px 50px 200px;
+
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 80px;
+            font-family: 'Bebas Neue';
+            font-weight: 20;
+            line-height: 1;
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+        }
+
+        .hero h1:hover {
+            font-weight: bold;
+            background: linear-gradient(#ff0000, #0000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero a:hover {
+            opacity: 0.7;
+            color: chartreuse;
+            border: 1px solid yellowgreen;
+            transform: translateY(-2px);
+        }
+
+        .hero-description {
+            font-size: 16px;
+            font-family: 'prompt';
+            color: #b6b4b4;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .contact-btn {
+            background: #7A99E9;
+            color: black;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #1d1d1d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 20px;
+            text-decoration: none;
+            color: #7A99E9;
+        }
+
+        .social-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 60px;
+        }
+
+        .profile-img {
+            width: 400px;
+            height: 480px;
+            border-radius: 20px;
+            object-fit: cover;
+
+        }
+
+
+        /* About Section */
+        .about {
+            padding: 100px 210px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .about h2 {
+            font-size: 80px;
+            font-weight: 10;
+            font-family: 'Bebas Neue';
+            line-height: 1;
+            margin-bottom: 5px;
+            letter-spacing: 5px;
+        }
+
+        .about h2:hover {
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff0000, #0000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-header {
+            font-size: 24px;
+            line-height: 1.5;
+            font-family: 'Prompt';
+            margin-bottom: 5px;
+            opacity: 0.9;
+            grid-column: 2 / 3;
+        }
+
+        .about-header:hover {
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff0000, #0000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-text {
+            font-size: 14px;
+            line-height: 1.5;
+            font-family: 'Prompt';
+            color: #b6b4b4;
+            margin-bottom: 5px;
+            opacity: 0.9;
+            grid-column: 2 / 3;
+        }
+
+        .about-buttons {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            margin: 40px 0 60px 0;
+            grid-column: 2 / 3;
+        }
+
+        .about-buttons a:hover {
+            opacity: 0.7;
+            color: chartreuse;
+            border: 1px solid yellowgreen;
+            transform: translateY(-2px);
+        }
+
+        .download-btn {
+            background: #7A99E9;
+            color: black;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .about-image {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            grid-column: 1 / 3;
+        }
+
+        .about-img {
+            object-fit: cover;
+            width: 1254;
+            height: 709;
+            top: 1430px;
+            left: 121px;
+            opacity: 1;
+            border-radius: 25px;
+
+        }
+
+        /* Capabilities Section */
+        .capabilities {
+            padding: 20px 210px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .capabilities h2 {
+            font-size: 60px;
+            font-weight: 10;
+            font-family: 'Bebas Neue';
+            line-height: 1;
+            margin-bottom: 5px;
+            letter-spacing: 5px;
+        }
+
+        .capabilities h2:hover {
+            font-weight: bold;
+            background: linear-gradient(5deg, #ff0000, #0000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .capabilities-description {
+            font-size: 16px;
+            line-height: 150%;
+            font-family: 'prompt';
+            color: #b6b4b4;
+            margin-bottom: 10px;
+            opacity: 0.9;
+            grid-column: 2 / 3;
+
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            font-family: 'prompt';
+            gap: 20px;
+            max-width: 600px;
+            grid-column: 2 / 3;
+        }
+
+        .skill-item {
+            background: transparent;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 14px;
+            border: 1px solid #767575;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .skills-grid :hover {
+            background: #58aee0;
+            opacity: 0.7;
+            color: chartreuse;
+            border: 1px solid yellowgreen;
+            transform: translateY(-2px);
+        }
+
+
+        /* Experience Section */
+        .experience {
+            padding: 70px 210px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .experience h2 {
+            font-size: 60px;
+            font-weight: 10;
+            font-family: 'Bebas Neue';
+            line-height: 1;
+            margin-bottom: 5px;
+            letter-spacing: 5px;
+        }
+
+        .experience h2:hover {
+            font-weight: bold;
+            background: linear-gradient(80deg, #ff0000, #0000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .exp {
+            grid-column: 2 / 3;
+        }
+
+        .exp-item {
+            margin-bottom: 50px;
+            border-bottom: 1px solid gray;
+            padding-bottom: 40px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .exp-title {
+            font-size: 24px;
+            font-family: 'Manrope';
+        }
+
+        .exp-date {
+            font-size: 14px;
+            opacity: 0.8;
+            font-family: 'prompt';
+            color: #767575;
+        }
+
+        .exp-date:hover {
+            opacity: 0.7;
+            background: none;
+            cursor: pointer;
+            color: #945502;
+            border: none;
+            transform: translateY(-2px);
+        }
+
+        .exp-description {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.9;
+            color: #767575;
+            max-width: 800px;
+            font-family: 'prompt';
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 0 220px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .contact-info {
+            flex: 1;
+            max-width: 400px;
+            grid-column: 1 / 2;
+        }
+
+        .contact h2 {
+            font-size: 50px;
+            font-weight: 10;
+            font-family: 'Bebas Neue';
+            line-height: 1;
+            margin-bottom: 5px;
+            letter-spacing: 5px;
+            ;
+        }
+
+        .contact h2:hover {
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff0000, #0000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-details {
+            margin-bottom: 40px;
+        }
+
+        .contact-details p {
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1;
+            font-family: 'prompt';
+            color: #767575;
+        }
+
+        .contact-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .contact-social a:hover {
+            opacity: 0.7;
+            background: #58aee0;
+            color: chartreuse;
+            border: 1px solid yellowgreen;
+            transform: translateY(-2px);
+        }
+
+        .contact-form {
+            max-width: 500px;
+            grid-column: 2 / 3;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'prompt';
+            color: #767575;
+            opacity: 0.9;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 18px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #060135;
+            color: whitesmoke;
+            font-size: 16px;
+            border: 1px solid none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: whitesmoke;
+        }
+
+        .form-group textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #7A99E9;
+            color: black;
+            padding: 16px 35px;
+            border: none;
+            border-radius: 250px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+
+        }
+
+        button[type="submit"]:hover {
+            color: chartreuse;
+            border: 0.5px solid yellowgreen;
+            transform: translateY(-2px);
+        }
+
+
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-family: 'prompt';
+            padding: 40px;
+            border-top: 0.5px solid #545456;
+            font-size: 14px;
+            opacity: 0.7;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">SAKKARIN OPASRI</div>
+        <nav class="nav">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>HI, I AM<br>SAKKARIN O.</h1>
+            <p class="hero-description">
+                พนักงาน ไอที ซัพพอร์ต บริษัทเอกชนแห่งหนึ่ง ที่มีความหลงไหล และ ชื่นชอบในการแก้ไขปัญหา
+                ด้วยการ รีโมทหน้าจอ และ รู้สึกตื่นเต้นทุกครั้ง ที่ได้ ค้นหา และ วิเคราะห์การแก้ไขปัญหา
+                เพื่อนำประสบการณ์ไปต่อยอด ในการทำงาน และ นำเสนอ รีพอร์ต กับทางผู้บริหาร เพื่อนำไปเก็บเป็น Inventory
+                ในอนาคตให้กับน้องๆในทีม
+                <!-- นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ จากประเทศไทย
+                ที่มีความหลงใหลในการสร้าง เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้ -->
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="contact-btn">CONTACT ME ●</a>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-img">
+                <img src="./Image/Me1.jpg" alt="Profile Image"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>ABOUT ME</h2>
+        <p class="about-header ">
+            ผมเป็น IT Support ที่ทำงาน
+            อยู่ในกรุงเทพฯ กำลังมองหาโอกาสที่น่าตื่นเต้น
+            ในการทำงาน มีพื้นฐานการศึกษาด้าน วิศวกรรมซอฟต์แวร์
+        </p>
+        <p class="about-text">
+            ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์
+            มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ
+            ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และออกแบบ
+            เว็บไซต์เล็กน้อยเมื่อไม่ได้เขียนโปรแกรม กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
+            ผมชอบเล่นฟุตบอล ถ่ายภาพ และ เล่นเกม PES , HON หากสนใจเข้ามา Join กันได้นะครับ
+        </p>
+        <div class="about-buttons">
+            <a href="#" class="download-btn">DOWNLOAD RESUME ●</a>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="./Image/Me2.png" alt="About Image" class="about-img">
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities">
+        <h2>MY CAPABILITIES</h2>
+        <p class="capabilities-description">
+            ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบล็กเอนด์
+            การออกแบบ UX/UI , DATABASE
+        </p>
+        <div class="skills-grid">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JAVASCRIPT</div>
+            <div class="skill-item">FLUTTER</div>
+            <div class="skill-item">DART</div>
+            <div class="skill-item">IoT</div>
+            <div class="skill-item">REACT</div>
+            <div class="skill-item">DATABASE</div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="work">
+        <h2>MY EXPERIENCE</h2>
+
+        <div class="exp">
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">IT Officer ( Site TRUESHOP )</div>
+                    <div class="exp-date">JAN 2023 - PRESENT</div>
+                </div>
+                <p class="exp-description">
+                    ซัพพอต ดูแล เหตุเสียทั้งหมด ภายใต้ทรูช้อป ทั้งงานประเภท IT และ งานโครงสร้าง โดยการ Remote Desktop
+                    แนะนำ แก้ไข ประเภาทงาน IT
+                    และ ประสาน VENDOR เข้าแก้ไขในส่วนของงานโครงสร้าง เพื่อให้ทันต่อ SLA ที่ทางบริษัทกำหนด
+                </p>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Technician ( BMA )</div>
+                    <div class="exp-date">OCT 2016 - DEC 2023</div>
+                </div>
+                <p class="exp-description">
+                    ตรวจสอบ แก้ไข ซ่อมบำรุงโครงข่าย และ ข่ายสาย Port / Vdsl,Adsl / DOCSIS Cable / Fiber Optic อุปกรณ์
+                    เร้าท์เตอร์ แอคเซสพ้อย Mesh wifi
+                    ให้พร้อมใช้งานอยู่เสมอ และให้บริการด้านการซัพพอทลูกค้า ภายใต้ Scab ที่รับผิดชอบ
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-info">
+            <h2>LET'S CONNECT</h2>
+            <div class="contact-details">
+                <p>Say Hello at Sakkarin.opa@gmail.com </p>
+                <p>For more info, here's my Resume</p>
+            </div>
+            <div class="contact-social">
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter/X">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder=""></textarea>
+                </div>
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2025 Created by SAU-Dev-Team
+    </footer>
+</body>
+
+</html>
